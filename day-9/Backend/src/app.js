@@ -1,8 +1,10 @@
 const express = require("express");
 const noteModel = require("./models/notes.model");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // Post api
@@ -53,6 +55,17 @@ app.patch("/api/notes/:id", async (req, res) => {
 
   res.status(200).json({
     message: "Note updated Successfully",
+  });
+});
+
+// Get perticular note api
+
+app.get("/api/notes/:id", async (req, res) => {
+  const id = req.params.id;
+  const note = await noteModel.findById(id);
+
+  res.status(200).json({
+    note,
   });
 });
 

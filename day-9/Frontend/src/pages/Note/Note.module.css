@@ -1,0 +1,41 @@
+.title {
+  text-align: left;
+  margin: 1rem 0 0.5rem;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  position: relative;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 0.5rem;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.deleteButton {
+  border: none;
+  outline: none;
+  width: 57px;
+  height: 33px;
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.description {
+  padding: 0;
+}
